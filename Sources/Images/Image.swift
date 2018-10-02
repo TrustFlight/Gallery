@@ -24,7 +24,7 @@ extension Image {
   public func resolve(completion: @escaping (UIImage?) -> Void) {
     let options = PHImageRequestOptions()
     options.isNetworkAccessAllowed = true
-    options.deliveryMode = .highQualityFormat
+    options.isSynchronous = true
 
     let targetSize = CGSize(
       width: asset.pixelWidth,
